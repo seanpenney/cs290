@@ -1,0 +1,48 @@
+<CATALOG>
+
+<COURSE>
+	<TITLE>
+		CS290 Web Development
+	</TITLE>
+	<INSTRUCTOR>
+		Scaffidi
+	</INSTRUCTOR>
+</COURSE>
+
+<COURSE>
+	<TITLE>
+		CS311 Operating Systems 1
+	</TITLE>
+	<INSTRUCTOR>
+		McGrath
+	</INSTRUCTOR>
+</COURSE>
+
+<COURSE>
+	<TITLE>
+		CS261 Data Structures
+	</TITLE>
+	<INSTRUCTOR>
+		Metoyer
+	</INSTRUCTOR>
+</COURSE>
+
+<COURSE>
+	<TITLE>
+		CS472 Computer Architecture
+	</TITLE>
+	<INSTRUCTOR>
+		McGrath
+	</INSTRUCTOR>
+</COURSE>
+
+<COURSE>
+	<TITLE>
+		ECE375 Computer Architecture
+	</TITLE>
+	<INSTRUCTOR>
+		Lee
+	</INSTRUCTOR>
+</COURSE>
+
+</CATALOG>

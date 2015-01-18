@@ -1,5 +1,5 @@
 body, th, td, li {font-family: sans-serif}
-h1, h3, ul{text-align: center}
+h1, h3{text-align: center}
 th{font-weight: bold; text-align: left}
 td{text-align: left;}
 body{background-color: #b0c4de;}
@@ -19,4 +19,10 @@ table#table1 {
 
 #buttonright{
 	float: right;
+}
+
+#courseinfoclick{
+	width: 20%;
+	margin-left:40%;
+	margin-right:40%;
 }

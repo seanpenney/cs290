@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js" type="text/javascript"></script>
 </head>
 <body>
 <div class=center>
@@ -8,39 +9,9 @@
 Hello World! My name is Sean Penney
 </h1>
 
-<table id="table1">
-
-<tr>
-<th>Favorite Courses</th>
-<th>Instructor</th>
-</tr>
-
-<tr>
-<td>CS290 Web Development</td>
-<td>Scaffidi</td>
-</tr>
-
-<tr>
-<td>CS311 Operating Systems 1</td>
-<td>McGrath</td>
-</tr>
-
-<tr>
-<td>CS261 Data Structures</td>
-<td>Metoyer</td>
-</tr>
-
-<tr>
-<td>CS472 Computer Architecture</td>
-<td>McGrath</td>
-</tr>
-
-<tr>
-<td>ECE375 Computer Architecture</td>
-<td>Lee</td>
-</tr>
-
-</table>
+<div id="courseInfo">
+<button id="courseinfoclick" onclick="loadXMLDoc('courses.xml')">Get Course Information</button>
+</div>
 
 <h3>
 Courses I want to take
