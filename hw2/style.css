@@ -1,0 +1,22 @@
+body, th, td, li {font-family: sans-serif}
+h1, h3, ul{text-align: center}
+th{font-weight: bold; text-align: left}
+td{text-align: left;}
+body{background-color: #b0c4de;}
+
+div.center {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table#table1 {
+	width: 70%;
+	margin-left:15%;
+	margin-right:15%;
+}
+
+#buttonright{
+	float: right;
+}
