@@ -1,8 +1,5 @@
 $(document).ready(function(){
 	$("form").submit(function(e){
-		
-		var frm = $("form");
-		
 		var mydata = {
 			name: $("#module_name").val()
 		};
@@ -16,7 +13,7 @@ $(document).ready(function(){
 			error: errFunction
 		});
 		e.preventDefault();
-        return false;
+		return false;
 	});
 	
 	function errFunction(a,b) {	
@@ -30,18 +27,20 @@ $(document).ready(function(){
 			var obj = data[i];
 			var tr = $("<tr></tr>");
 			
+			/* name, functionality, tag, rating just need text */
 			tr.append($("<td></td>").text(obj.name));
+			
+			/*setup link*/
 			$("<td><a id='link' href=''>Link</a></td>").appendTo(tr);
 			
 			tr.append($("<td></td>").text(obj.functionality));
 			tr.append($("<td></td>").text(obj.tag));
 			tr.append($("<td></td>").text(obj.rating));
 			tbody.append(tr);
+			
+			/*insert link from JSON*/
 			var link = $("#link");
 			link.attr("href", obj.link);
 		}
 	}
-	
-	
-	
 });
