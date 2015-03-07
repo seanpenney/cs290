@@ -1,18 +1,7 @@
 <?php
 
 ini_set('display_errors', 'On');
-
-$dbhost = 'oniddb.cws.oregonstate.edu';
-$dbname = 'penneys-db';
-$dbuser = 'penneys-db';
-$dbpass = 'xSTsLRT7jfXSo5ZM';
-
-$mysqli = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
-
-if ($mysqli->connect_errno) {
-	printf("Connect failed: %s\n", $mysqli->connect_error);
-	exit();
-}
+include('common.inc.php');
 
 $module_tag = array_key_exists("tag", $_REQUEST) ? $_REQUEST["tag"] : 0;
 
