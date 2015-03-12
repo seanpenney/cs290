@@ -22,6 +22,39 @@
         <li><a href="https://github.com/seanpenney/senior_project">GitHub Page</a></li>
         <li><a href="http://eecs.oregonstate.edu/capstone/capstone.cgi?project=121">About Project</a></li>   
       </ul>
+	  <ul class="nav navbar-nav navbar-right">
+		<li class="dropdown">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Register <strong class="caret"></strong></a>
+			<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+				<form id="register">
+					Username:<br/>
+					<input type="text" id="register_username"/>
+					<br/><br/>
+					Password:<br/>
+					<input type="password" id="register_password"/>
+					<br/><br/>
+					<button type="submit" class="btn btn-info">Submit</button>
+					<br/><br/>
+				</form>
+			</div>
+		</li>
+		<li class="divider-vertical"></li>
+		<li class="dropdown" id="login_dropdown">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span>Login <strong class="caret"></strong></a>
+			<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+				<form id="login">
+					Username:<br/>
+					<input type="text" id="login_username"/>
+					<br/><br/>
+					Password:<br/>
+					<input type="password" id="login_password"/>
+					<br/><br/>
+					<input type="submit" class="btn btn-info" value="Login"/>
+					<br/><br/>
+				</form>
+			</div>
+		</li>
+	  </ul>
     </div>
   </div>
 </nav>

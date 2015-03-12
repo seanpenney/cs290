@@ -71,16 +71,62 @@ $(document).ready(function(){
 		return false;		
 	});
 	
+	$("#register").submit(function(e){
+		var mydata = {
+			username: $("#register_username").val(),
+			password: $("#register_password").val()
+		};
+		
+		$.ajax({
+			method: "post",
+			url: "register.php",
+			data: mydata,
+			dataType: "json",
+			success: registerSuccess,
+			error: errFunction
+		});
+		e.preventDefault();
+		return false;		
+	});
+	
+	$("#login").submit(function(e){
+		var mydata = {
+			username: $("#login_username").val(),
+			password: $("#login_password").val()
+		};
+		
+		$.ajax({
+			method: "post",
+			url: "login.php",
+			data: mydata,
+			dataType: "json",
+			success: loginSuccess,
+			error: errFunction
+		});
+		e.preventDefault();
+		return false;		
+	});
+	
 	function errFunction(a,b) {	
 		alert("error:"+a+"/"+b);
 	}
 	
 	function addSuccess(data) {
-		alert("Module added");
+		alert(data.message);
 	}
 	
 	function reviewSuccess(data) {
-		alert("Review Submitted");
+		alert(data.message);
+	}
+	
+	function registerSuccess(data) {
+		alert(data.message);
+		$('[data-toggle="dropdown"]').parent().removeClass('open');
+	}
+	
+	function loginSuccess(data) {
+		alert(data.message);
+		$('[data-toggle="dropdown"]').parent().removeClass('open');
 	}
 	
 	function updateUI(data) {

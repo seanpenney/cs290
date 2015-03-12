@@ -6,7 +6,7 @@ include('common.inc.php');
 $module_tag = array_key_exists("tag", $_REQUEST) ? $_REQUEST["tag"] : 0;
 
 if (!preg_match('/^.[a-zA-z0-9\s]+.$/', $module_tag))
-	die(json_encode(array('message' => 'ERROR', 'code' => 1336)));
+	die(json_encode(array('message' => 'Problem with tag')));
 
 $list = array();
 if ($result = $mysqli->query("select * from modules where tag = " . "'" . $module_tag . "'")) {
@@ -27,7 +27,7 @@ if ($result = $mysqli->query("select * from modules where tag = " . "'" . $modul
 
 header("Content-Type: application/json", true);
 if (empty($list)) {
-	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+	die(json_encode(array('message' => 'ERROR')));
 }
 else {
 	echo json_encode($list);

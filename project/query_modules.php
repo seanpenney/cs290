@@ -6,7 +6,7 @@ include('common.inc.php');
 $module_name = array_key_exists("name", $_REQUEST) ? $_REQUEST["name"] : 0;
 
 if (!preg_match('/^.[a-zA-z0-9]+.$/', $module_name))
-	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+	die(json_encode(array('message' => 'Problem with name')));
 
 $list = array();
 if ($result = $mysqli->query("select * from modules where name = " . "'" . $module_name . "'")) {
@@ -27,7 +27,7 @@ if ($result = $mysqli->query("select * from modules where name = " . "'" . $modu
 
 header("Content-Type: application/json", true);
 if (empty($list)) {
-	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+	die(json_encode(array('message' => 'ERROR')));
 }
 else {
 	echo json_encode($list);
