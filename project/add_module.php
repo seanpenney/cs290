@@ -1,5 +1,4 @@
 <?php
-
 ini_set('display_errors', 'On');
 include('common.inc.php');
 header("Content-Type: application/json", true);
@@ -18,7 +17,7 @@ $module_tag = array_key_exists("tag", $_REQUEST) ? $_REQUEST["tag"] : 0;
 if (!preg_match('/^.[a-zA-z0-9\s]+.$/', $module_name))
 	die(json_encode(array('message' => 'Problem with module name')));
 
-if ($result = $mysqli->query("insert into modules(name, link, functionality, tag, rating) values('$module_name', '$module_url', '$module_functionality', '$module_tag', 10)")) {
+if ($result = $mysqli->query("insert into modules(name, link, functionality, tag) values('$module_name', '$module_url', '$module_functionality', '$module_tag')")) {
 	echo json_encode(array('message' => 'Successfully added module'));	
 } else {
 	die(json_encode(array('message' => 'Problem with database')));	

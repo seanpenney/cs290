@@ -1,7 +1,7 @@
 <?php
-
 ini_set('display_errors', 'On');
 include('common.inc.php');
+header("Content-Type: application/json", true);
 
 $module_tag = array_key_exists("tag", $_REQUEST) ? $_REQUEST["tag"] : 0;
 
@@ -20,12 +20,12 @@ if ($result = $mysqli->query("select * from modules where tag = " . "'" . $modul
 			"tag" => $obj->tag,
 			"rating" => number_format((float)$new_obj->rating_average, 2, '.', '')
 		);
+		$new_result->close();
 		array_push($list, $item);
 	}
 	$result->close();
 }
 
-header("Content-Type: application/json", true);
 if (empty($list)) {
 	die(json_encode(array('message' => 'ERROR')));
 }

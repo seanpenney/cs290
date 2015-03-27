@@ -1,5 +1,4 @@
 <?php
-
 ini_set('display_errors', 'On');
 include('common.inc.php');
 header("Content-Type: application/json", true);

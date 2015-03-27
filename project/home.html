@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Bluetooth Hardware Control Environment</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="script.js" type="text/javascript"></script>
+	<link href="custom.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">APE Industries</a>
+			</div>
+
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="http://web.engr.oregonstate.edu/~penneys/bluetooth/home.html">Home</a>
+					</li>
+
+					<li>
+						<a href="http://web.engr.oregonstate.edu/~penneys/bluetooth/upload_module_page.html">Upload Module</a>
+					</li>
+
+					<li>
+						<a href="http://web.engr.oregonstate.edu/~penneys/bluetooth/rate_module_page.html">Rate Module</a>
+					</li>
+
+					<li>
+						<a href="http://eecs.oregonstate.edu/capstone/capstone.cgi?project=121">About Project</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#" id="welcome_message"></a>
+						</div>
+					</li>
+
+					<li>
+						<a href="http://web.engr.oregonstate.edu/~penneys/bluetooth/register.html">Register</a>
+					</li>
+
+					<li class="dropdown" id="login_dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span> Login <strong class="caret"></strong></a>
+
+						<div class="dropdown-menu" style="padding: 15px;">
+							<form id="login" name="login">
+								Username:<br>
+								<input class="form-control" id="login_username" type="text"><br>
+								Password:<br>
+								<input class="form-control" id="login_password" type="password"><br>
+								<input class="btn btn-info" type="submit" value="Login"><br>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h2>Bluetooth Hardware Control</h2>
+
+			<p>This site allows users to upload and download plugins for the bluetooth hardware control Android app.</p>
+
+			<p>The bluetooth hardware control app is being developed as part of a senior project at Oregon State University.</p>
+
+			<p>To upload or rate modules, users must be signed into an account.</p>
+		</div>
+
+		<h3>Search for Modules (by name or tag)</h3>
+
+		<div class="row">
+			<div class="col-md-6">
+				<form id="module_search" name="module_search">
+					<div class="form-group">
+						<label for="module_name">Module Name:</label> <input class="form-control" id="module_name" placeholder="Enter module name (such as BLE)" type="text">
+					</div><button class="btn btn-default" type="submit">Submit</button>
+				</form>
+			</div>
+
+			<div class="col-md-6">
+				<form id="module_search_tag" name="module_search_tag">
+					<div class="form-group">
+						<label for="module_tag">Module Tag:</label> <input class="form-control" id="module_tag" placeholder="Enter module tag (such as BLE UART)" type="text">
+					</div><button class="btn btn-default" type="submit">Submit</button>
+				</form>
+			</div>
+		</div><br>
+		<br>
+
+		<h2>Search Results</h2>
+
+		<table class="table table-hover" id="modules">
+			<thead>
+				<tr>
+					<th>Module Name</th>
+
+					<th>GitHub/Download Link</th>
+
+					<th>Module Functionality</th>
+
+					<th>Tag</th>
+
+					<th>Rating</th>
+				</tr>
+			</thead>
+
+			<tbody></tbody>
+		</table><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+</body>
+</html>
