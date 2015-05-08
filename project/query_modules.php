@@ -5,7 +5,7 @@ header("Content-Type: application/json", true);
 
 $module_name = array_key_exists("name", $_REQUEST) ? $_REQUEST["name"] : 0;
 
-if (!preg_match('/^.[a-zA-z0-9]+.$/', $module_name))
+if (!preg_match('/^.[a-zA-z0-9 ]+.$/', $module_name))
 	die(json_encode(array('message' => 'Problem with name')));
 
 $list = array();

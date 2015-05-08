@@ -5,7 +5,7 @@ header("Content-Type: application/json", true);
 
 session_start();
 
-if(!isset($_SESSION['uid'])) {
+if(!isset($_SESSION['username'])) {
 	die(json_encode(array('message' => 'Not Logged In')));
 }
 
